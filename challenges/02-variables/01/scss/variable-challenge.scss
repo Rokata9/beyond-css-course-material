@@ -1,3 +1,7 @@
+$clr-white: #f8f7f7;
+$clr-black: #201e1f;
+$clr-red: #da3f0b;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,6 +16,9 @@ body {
   display: grid;
   height: 100vh;
   place-items: center;
+  background: $clr-white;
+  color: $clr-black;
+  
 }
 
 .card {
@@ -19,12 +26,39 @@ body {
   gap: 0.75em;
   width: min(90%, 60rem);
   padding: 2em;
+  box-shadow: 0 0 16px $clr-black;
+  
+  &__title {
+    color: $clr-red;
+  }
 }
 
 .btn {
   display: inline-block;
   padding: 0.5em 1.5em;
   text-decoration: none;
+  border: 2px solid $clr-red;
+  border-radius: 5px;
+
+  &:hover,
+  &:focus {
+    background: $clr-black;
+    box-shadow: 0 0 10px $clr-red;
+  }
+
+  &--primary {
+    color: $clr-white;
+    background-color: $clr-red;
+  }
+
+  &--outline {
+    color: $clr-red;
+    background-color: $clr-white;
+
+    &:hover {
+      color: $clr-white;
+    }
+  }
 }
 
 .flex-group {
